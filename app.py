@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Load model and preprocessors
 model = XGBClassifier()
 model.load_model('xgb_crop_recommendation_model.json')
-scaler = joblib.load('Scaler.pkl')
+scaler = joblib.load('scaler.pkl')
 label_encoder = joblib.load('crop_label_encoder.pkl')
 
 @app.route('/')
